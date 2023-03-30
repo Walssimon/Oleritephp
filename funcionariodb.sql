@@ -1,0 +1,13 @@
+CREATE DATABASE funcionario;
+
+USE funcionario;
+
+CREATE TABLE funcionariocad(
+idfuncionario  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome  VARCHAR(50) NOT NULL,
+sobrenome VARCHAR(150) NOT NULL,
+cpf VARCHAR(14) NOT NULL UNIQUE KEY,
+
+);
+
+
