@@ -1,6 +1,7 @@
 <?php
 include_once 'conexaodb.php';
 include_once 'inicio.html';
+ imprime();
 ?>
 
 <div> 
