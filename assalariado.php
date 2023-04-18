@@ -1,38 +1,18 @@
 <?php
+    include_once "empregado.php";
+
+    class Assalariado extends Empregado{
+     var $salario;
     
-    class assalariado
-    {
-     var $salario = 1000.00;
-     var $fgts = 0.08;
-     var $inss = 0.075;
-   
-     
-function descontosA($desconto){
-    if ($desconto > 0){
-        $this -> salario - 0.08;
+function Empregado__construct($nome, $sobrenome, $cpf,$salario){
+			parent::cad__construct($nome, $sobrenome, $cpf,$salario);
+			$this->salario = $salario;
+		}
 
-        $this -> fgts = $this -> salario - ($this -> salario * $this -> fgts);
-        $this -> inss = $this -> salario - ($this -> salario * $this -> inss);
-    
-        $this -> salario = $this -> salario - ($this -> inss + $this ->fgts);
-
-        echo ("seu salario é: {$this -> salario}");
-    }
-
-
-    
-   
-}
-
-function inss($salario,$inss){
-
-    $inss = $salario - ($salario * $inss);
-
-    return $this -> inss;
-    echo "Seu Inss é: {$inss}";
-}
-    
+function somando($salario){
+            return $salario; 
+        }
 }   
 
-echo "abc $salario";
+
 ?>
